@@ -1,0 +1,26 @@
+{
+  "source": "https://shakeshack.com/",
+  "tokens": {
+    "spacing": { "scale": [8, 11, 15, 25, 30, 33, 50], "base_unit": 1 },
+    "typography": { "families": ["Jost"], "scale": [
+      { "role": "hero", "size": "47px", "weight": "700", "family": "Jost" },
+      { "role": "h2", "size": "30px", "weight": "700", "family": "Jost" },
+      { "role": "body", "size": "14px", "weight": "400", "family": "Jost" }
+    ]},
+    "colors": [
+      { "role": "background", "value": "#FFFFFF" },
+      { "role": "text-primary", "value": "#000000" },
+      { "role": "overlay", "value": "rgba(0,0,0,0.8)" },
+      { "role": "accent", "value": "#418613" }
+    ],
+    "radius": ["30px", "40px", "50%"], "shadows": [],
+    "image_ratios": [{ "usage": "hero", "ratio": "2.77:1" }],
+    "grid": { "max_width": "none", "columns": 12, "gutter": "30px" }
+  },
+  "taste": [
+    { "name": "El producto gana el primer vistazo", "trigger": "Cuando el visitante decide por apetito", "decision": "Fotografía a sangre completa sobre catálogo", "reason": "La decisión ocurre primero con los ojos", "evidence": ["hero 2.77:1", "imagen 1425px"] },
+    { "name": "Contraste de señalética", "trigger": "Cuando el texto compite con fotografía", "decision": "Negro y blanco sobre transparencias decorativas", "reason": "El mensaje debe leerse como una orden breve", "evidence": ["overlay rgba(0,0,0,0.8)", "texto #FFFFFF"] },
+    { "name": "Composición antes que tarjetas", "trigger": "Cuando se agrupa contenido", "decision": "Retícula y escala sobre tarjetas", "reason": "La página comunica restaurante, no software", "evidence": ["12 columnas", "gutter 30px", "sin sombras"] },
+    { "name": "Una sola voz tipográfica", "trigger": "Cuando conviven varios niveles", "decision": "Jost en tres pesos sobre dos familias", "reason": "Peso y escala resuelven la jerarquía", "evidence": ["Jost 439 elementos", "47px/700", "14px/400"] }
+  ]
+}

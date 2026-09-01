@@ -1,0 +1,11 @@
+Use case: ads-marketing
+Asset type: wide landing-page hero photograph for an original fast-food burger brand
+Primary request: Create an irresistible close-up product photograph of one towering double smash burger, the burger is the unquestionable main attraction.
+Scene/backdrop: deep warm tomato-red seamless studio background, no environment, no props except a small piece of wrinkled off-white deli paper under the burger.
+Subject: two crisp-edged smashed beef patties, melted cheddar folded over the edges, glossy potato bun, pickles, shredded lettuce, thin onion, signature orange sauce, realistic appetizing texture and subtle steam.
+Style/medium: editorial commercial food photography, high-end but energetic, tactile and real rather than perfect CGI.
+Composition/framing: landscape 3:2, burger occupies the right 58% of frame and is fully visible; generous calm negative space on the left for large Spanish headline; eye-level slightly low camera, 85mm food photography.
+Lighting/mood: hard directional late-afternoon studio light from upper left, rich shadows, strong separation, punchy appetite appeal.
+Color palette: tomato red, toasted bun amber, cheddar yellow, pickle green, warm off-white.
+Materials/textures: crisp seared crust, glistening cheese, soft glossy bun, visible sauce.
+Constraints: no text, no logos, no packaging, no hands, no people, no extra burgers, no fries, no drinks, no watermark. The image must work behind website UI and remain legible with text on the empty left side.
