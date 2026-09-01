@@ -14,8 +14,8 @@ const archivo = Archivo_Black({
 });
 
 export const metadata: Metadata = {
-  title: 'Brasa Brava | Hamburguesas sin pedir permiso',
-  description: 'Smash burgers al fuego, cheddar fundido y salsa Brava.',
+  title: 'Donde Kike | Hamburguesas, perros y antojos',
+  description: 'Hamburguesas, perros calientes, picadas, bebidas y domicilios de Donde Kike.',
 };
 
 export default function RootLayout({

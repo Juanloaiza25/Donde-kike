@@ -1,12 +1,12 @@
 ---
-name: Brasa Brava
-description: A loud neighborhood burger counter built from flat sign-painted fields and appetite-first photography.
+name: Donde Kike
+description: A bold neighborhood fast-food counter built from sign-painted fields and direct ordering controls.
 colors:
   tomato-red: "oklch(0.54 0.225 29)"
   mustard-yellow: "oklch(0.82 0.16 84)"
   deli-paper-cream: "oklch(0.965 0.025 86)"
   near-black-ink: "oklch(0.17 0.035 44)"
-  menu-row-hover: "oklch(0.92 0.075 84)"
+  toasted-hover: "oklch(0.92 0.075 84)"
 typography:
   display:
     fontFamily: "Archivo Black, sans-serif"
@@ -18,14 +18,8 @@ typography:
     fontFamily: "Archivo Black, sans-serif"
     fontSize: "clamp(4rem, 6.6vw, 6rem)"
     fontWeight: 400
-    lineHeight: 0.84
-    letterSpacing: "-0.04em"
-  title:
-    fontFamily: "Archivo Black, sans-serif"
-    fontSize: "clamp(2.125rem, 4vw, 3.875rem)"
-    fontWeight: 400
-    lineHeight: 1
-    letterSpacing: "-0.035em"
+    lineHeight: 0.94
+    letterSpacing: "-0.025em"
   body:
     fontFamily: "Manrope, sans-serif"
     fontSize: "1rem"
@@ -35,7 +29,6 @@ typography:
     fontFamily: "Manrope, sans-serif"
     fontSize: "0.875rem"
     fontWeight: 800
-    lineHeight: 1
 rounded:
   none: "0"
   action: "999px"
@@ -43,7 +36,6 @@ rounded:
 spacing:
   page-min: "22px"
   page-max: "96px"
-  action-x: "28px"
   section-min: "80px"
   section-max: "180px"
 components:
@@ -54,159 +46,125 @@ components:
     rounded: "{rounded.action}"
     padding: "0 28px"
     height: "52px"
-  button-dark:
+  category-tab-selected:
     backgroundColor: "{colors.near-black-ink}"
     textColor: "{colors.deli-paper-cream}"
     typography: "{typography.label}"
     rounded: "{rounded.action}"
-    padding: "0 28px"
-    height: "52px"
-  icon-action:
-    backgroundColor: "{colors.near-black-ink}"
-    textColor: "{colors.deli-paper-cream}"
+    padding: "0 20px"
+    height: "46px"
+  cart-fab:
+    backgroundColor: "{colors.mustard-yellow}"
+    textColor: "{colors.near-black-ink}"
     rounded: "{rounded.circle}"
-    size: "58px"
+    size: "62px"
 ---
 
-# Design System: Brasa Brava
+# Design System: Donde Kike
 
 ## Overview
 
-**Creative North Star: "The Sign-Painted Burger Counter"**
+**Creative North Star: "The Sign-Painted Order Counter"**
 
-Brasa Brava feels like a neighborhood burger counter translated into crisp digital fields. Tomato red, deli-paper cream, mustard yellow, and near-black ink behave like sign paint: broad, blunt, and highly legible. Product photography is the only source of physical texture; the interface itself remains typographic, flat, and direct.
+Donde Kike translates a familiar neighborhood fast-food counter into broad tomato, mustard, cream, and ink fields. One burger dominates the opening view; Archivo Black declarations feel like storefront signage, while Manrope keeps the large menu, cart, and WhatsApp ordering flow practical.
 
-The system is appetite-first and deliberately loud without becoming busy. Oversized condensed-looking display forms carry the attitude, while compact Manrope copy keeps menu details practical. Density loosens around declarations and tightens around ordering decisions. The visual world supports the product promise: show the food immediately, name the choice concretely, and never manufacture social proof or operational certainty.
+The system moves from appetite to category choice, product selection, cart editing, promotions, and WhatsApp handoff without inventing prices or claims. Photography supplies the only texture; the interface remains flat, typographic, and tactile.
 
 **Key Characteristics:**
 
-- Flat, full-bleed color fields with near-black divider lines.
-- Oversized Archivo Black declarations with very tight leading and tracking.
-- Mustard pill actions and circular near-black utility controls.
-- Food photography as the sole textured material.
-- Direct Spanish copy with no decorative claims or filler UI.
+- Full-bleed brand-color sections and hard ink rules.
+- Oversized Archivo Black declarations with compressed leading.
+- Horizontal pill tabs for menu categories.
+- Ruled add-to-cart menu rows.
+- Persistent mustard cart button and cream side drawer.
+- WhatsApp as the final ordering action.
 
 ## Colors
 
-The palette behaves like four pots of sign paint: hot tomato, warm mustard, pale deli paper, and dense ink, with one restrained mustard-tinted hover surface.
-
 ### Primary
 
-- **Tomato Red** (`colors.tomato-red`): Owns the hero fallback field, manifesto, interactive hover accents, scrollbar, and contextual focus rings.
+- **Tomato Red** (`colors.tomato-red`): Hero fallback, manifesto field, add labels, destructive controls, and cart badge.
 
 ### Secondary
 
-- **Mustard Yellow** (`colors.mustard-yellow`): Marks the primary order action, emphasized words, flame details, selection, and the full-screen mobile navigation.
+- **Mustard Yellow** (`colors.mustard-yellow`): Primary actions, mobile navigation, contact field, emphasis, and selection.
 
 ### Neutral
 
-- **Deli-Paper Cream** (`colors.deli-paper-cream`): The base canvas, light text on dark fields, and scrollbar track.
-- **Near-Black Ink** (`colors.near-black-ink`): Body text, rules, dark actions, footer field, and circular controls.
-- **Toasted Mustard Wash** (`colors.menu-row-hover`): Appears only as the desktop menu-row hover response.
+- **Deli-Paper Cream** (`colors.deli-paper-cream`): Menu canvas, drawer, and light text.
+- **Near-Black Ink** (`colors.near-black-ink`): Copy, dividers, selected tabs, promotion/footer fields, and inverse actions.
+- **Toasted Hover** (`colors.toasted-hover`): Temporary menu-item feedback only.
 
-### Named Rules
-
-**The Four-Pot Rule.** Build the interface from tomato, mustard, cream, and ink; the hover wash is a state, not a fifth brand color.
-
-**The Texture Belongs to Food Rule.** Keep UI surfaces flat and clean. Texture comes from burger photography, never from decorative grain, gradients, or faux paper effects.
+**The Four-Pot Rule.** Tomato, mustard, cream, and ink own the brand; state tints never introduce a new hue family.
 
 ## Typography
 
-**Display Font:** Archivo Black (with sans-serif fallback)  
-**Body Font:** Manrope (with sans-serif fallback)
+**Display Font:** Archivo Black
+**Body Font:** Manrope
 
-**Character:** Archivo Black turns headlines into painted signage: broad, compressed through tight tracking, and intentionally blunt. Manrope provides a clear, contemporary countervoice for navigation, descriptions, prices, and actions.
+Archivo Black is reserved for short, uppercase declarations, category headings, and the cart title. Manrope handles descriptions, tabs, item names, quantities, navigation, and actions.
 
-### Hierarchy
-
-- **Display** (`typography.display`): Section declarations such as the menu heading; use very tight leading and uppercase copy.
-- **Headline** (`typography.headline`): Hero and location statements, capped at 6rem in the first viewport so type never overpowers the burger.
-- **Title** (`typography.title`): Burger names and other item-level declarations.
-- **Body** (`typography.body`): Descriptions and explanatory copy, generally held between 34ch and 58ch.
-- **Label** (`typography.label`): Navigation, prices, buttons, cues, and compact utility language.
-
-### Named Rules
-
-**The Painted Declaration Rule.** Use Archivo Black for short declarations, never for explanatory paragraphs.
-
-**The Tight-at-Scale Rule.** Large type earns its force from compact line-height and negative tracking; do not loosen it into generic marketing typography.
+**The Painted Declaration Rule.** Never use Archivo Black for paragraphs or dense operational text.
 
 ## Layout
 
-The page uses full-width horizontal fields with fluid gutters from `spacing.page-min` to `spacing.page-max`. Major section padding expands from `spacing.section-min` toward `spacing.section-max`, while the header uses a three-column grid that balances the wordmark, navigation, and order action.
+Full-width sections use fluid 22–96px gutters and 80–180px vertical rhythm. Desktop introductions use unequal two-column grids; the manifesto adds an emblem column. Category tabs form one horizontally scrollable row above a single active panel. Menu items use a two-column ruled grid with 94px minimum rows. The fixed cart opens a cream, right-aligned drawer capped at 480px over a dark scrim.
 
-Desktop layouts favor strong asymmetry: the hero image fills the viewport behind a left-side copy column; menu and location introductions split into unequal columns; the manifesto uses an icon, declaration, and copy column. Menu items are horizontal rows with a minimum height of 220px and hard ink dividers.
+At 760px, navigation becomes a full-screen mustard dialog, section grids collapse, and menu items become 82px single-column rows. Tabs remain one scrolling row and extend to the right edge. The 760px hero places photography in the upper 66% and anchors copy below it. The cart button shrinks from 62px to 56px and sits 16px from the lower-right edges; the drawer fills available width.
 
-At 760px and below, every multi-column section collapses to one column. The burger image occupies the upper 66% of a 760px hero and copy anchors to the bottom; menu rows stack; manifesto and location content become vertical; the footer becomes a left-aligned stack. Mobile gutters remain 22px, controls stretch when a full-width action improves reach, and horizontal overflow is never permitted.
-
-**The Appetite-First Viewport Rule.** The first screen belongs to one life-size burger, one product name, and one mustard action. Supporting explanation stays subordinate.
+**The Browse-Then-Build Rule.** Show one category panel at a time rather than the entire catalog.
 
 ## Elevation & Depth
 
-The system is flat by design and uses no box shadows. Depth comes from photographic lighting, overlapping hero copy, alternating full-bleed color fields, strong two-pixel rules, and small motion responses. Focus is expressed with a three-pixel outline and five-pixel offset rather than glow or elevation.
-
-### Named Rules
-
-**The No-Shadow Rule.** Never add card shadows, ambient glows, or floating panels. Use color adjacency, rules, and scale to establish hierarchy.
+The site is flat except where layering is functional. The cart button alone uses `0 12px 30px rgb(28 12 8 / 25%)`; the open drawer uses `rgb(28 12 8 / 55%)` behind it. Ordinary sections, tabs, rows, and buttons have no shadow.
 
 ## Shapes
 
-The dominant form language is a contrast between hard-edged page fields and fully rounded actions. Sections, rows, and content blocks have square corners (`rounded.none`); order actions use the pill radius (`rounded.action`); icon controls and the flame mark use circles (`rounded.circle`). Borders are structural and confident—two-pixel ink or mustard strokes—not fine decorative outlines.
-
-**The Ends-or-Edges Rule.** A shape is either square and architectural or fully rounded and actionable. Avoid intermediate card radii.
+Sections, panels, rows, and the drawer are square. Primary actions and tabs are pills; cart, close, quantity, badge, and flame controls are circles. Avoid intermediate card radii.
 
 ## Components
 
 ### Buttons
 
-Buttons feel compact, tactile, and decisive.
+Primary actions are 52px mustard pills with heavy ink labels and optional 18px icons. Fine-pointer hover lifts 2px and turns cream; press scales to 0.97. Dark inverse pills appear on mustard fields and in the cart. Focus uses a 3px outline with 5px offset.
 
-- **Shape:** Fully rounded pill (`rounded.action`) with a minimum height of 52px.
-- **Primary:** Mustard field, ink text, heavy label type, and 28px horizontal padding (`components.button-primary`).
-- **Hover / Focus:** On fine pointers, lift two pixels and turn cream over 160ms; keyboard focus uses the global three-pixel outline. Active state scales to 0.97.
-- **Dark:** Ink field with cream text (`components.button-dark`), used on mustard surfaces.
+### Category Navigation
 
-### Cards / Containers
+Tabs are 46px pills with 2px ink borders, 20px horizontal padding, and 10px gaps. The selected tab is ink with cream text; other tabs turn mustard on hover. Arrow Left/Right, Home, and End update the active tab through a roving tab index.
 
-Menu entries are not floating cards; they are ruled list rows.
+### Menu Items
 
-- **Corner Style:** Square (`rounded.none`).
-- **Background:** Cream at rest; toasted mustard wash on desktop hover.
-- **Shadow Strategy:** None.
-- **Border:** Two-pixel ink rules above the list and below every row.
-- **Internal Padding:** Mobile rows use 34px vertically; desktop rows rely on a 220px minimum height.
+Each product is a full-width button with mixed-ink rules, a weight-800 name, and a tomato uppercase “Agregar” label with plus icon. Hover adds the toasted wash and lifts 2px. Activation adds or increments the contextualized item in the cart.
 
-### Navigation
+### Cart
 
-Desktop navigation is centered in the absolute hero header with 14px, weight-700 Manrope links; links turn mustard on fine-pointer hover. The brand is a stacked 22px, weight-900 wordmark with BRAVA in mustard. At 760px, links and compact order action disappear in favor of a menu icon. The opened navigation becomes a full-viewport mustard field with Archivo Black links and an ink circular close control.
+The persistent mustard circle shows total quantity in a tomato badge. Adding an item triggers a bordered cream status toast above it with a tomato checkmark, while the cart performs a 420ms scale-and-rotate bump. The toast is an `aria-live` status and clears automatically. The cream drawer has a ruled header, circular close control, centered empty state, ruled cart items, 36px circular quantity controls, tomato removal, and a full-width WhatsApp checkout action. Opening either modal locks document scrolling; mobile navigation additionally traps focus, closes on Escape, and restores focus.
 
-### Menu Order Control
+### Promotions
 
-The menu-row arrow is a 58px ink circle with cream icon (`components.icon-action`). On fine-pointer hover it rotates eight degrees and turns tomato; on press it scales to 0.95. This control carries the list's strongest local action cue without becoming a second pill button.
+The promotion band is an ink field with a mustard uppercase eyebrow, oversized cream declaration, explanatory copy, and WhatsApp consultation action. Promotions and prices are framed as current information to confirm, never fixed claims.
 
-### Flame Mark
+### Location Map
 
-The manifesto emblem is an 86px mustard-outlined circle with a 40px flame icon; on mobile it reduces to 66px. It acts as a compact stamp, not a logo replacement.
+The mustard contact section ends with a full-width, two-pixel ink divider and a two-column Google Maps block. A compact “Visítanos” eyebrow, Archivo location heading, and underlined external link occupy the narrow column; the embedded map occupies the wide column at 420px high with restrained saturation and slightly raised contrast. On mobile the block stacks, the map becomes 340px high, and the top margin tightens.
 
 ### Motion
 
-State transitions use 160–180ms. Transform-heavy responses use the exponential-feeling ease-out curve (`cubic-bezier(0.23, 1, 0.32, 1)`); simple color changes use standard ease. The mobile navigation arrives over 180ms from 12px above while fading in. Reduced-motion mode removes smooth scrolling and action/link transition duration.
+Color states use 160ms; spatial feedback uses 180ms with `cubic-bezier(0.23, 1, 0.32, 1)`. The add confirmation toast fades and rises into place; the cart bump peaks at 1.12 scale with a -5deg rotation over 420ms. Reduced motion removes smooth scrolling, toast transitions, and the cart bump animation.
 
 ## Do's and Don'ts
 
 ### Do:
 
-- **Do** let one appetite image dominate the first viewport.
-- **Do** use full-bleed tomato, mustard, cream, or ink fields to separate major sections.
-- **Do** reserve Archivo Black for short, high-impact declarations and Manrope for useful detail.
-- **Do** use hard rules and color changes instead of card chrome or shadows.
-- **Do** preserve the 760px single-column collapse and 22px mobile gutter.
-- **Do** pair every motion response with a reduced-motion-safe result.
+- **Do** lead with the burger and a direct WhatsApp action.
+- **Do** preserve one active category panel and keyboard tab behavior.
+- **Do** keep the cart persistent, quantity-aware, and editable.
+- **Do** preserve modal focus, Escape, scroll-lock, and visible-focus behavior.
+- **Do** phrase prices and promotions as information confirmed through WhatsApp.
 
 ### Don't:
 
-- **Don't** introduce gradients, decorative texture, glass effects, or shadowed cards.
-- **Don't** add intermediate corner radii; use square fields, pill actions, or circles.
-- **Don't** expand hero display text beyond 6rem or let copy compete with the burger.
-- **Don't** dilute the palette with extra accents or use the hover wash as a resting surface.
-- **Don't** add feature-card grids, badges, testimonials, statistics, or unverified operational claims.
+- **Don't** publish unverified prices, addresses, partners, or fixed promotions.
+- **Don't** expose every category at once or wrap mobile tabs.
+- **Don't** add generic product cards, gradients, glass, or decorative shadows.
+- **Don't** remove persistent cart access or the multi-item WhatsApp summary.
