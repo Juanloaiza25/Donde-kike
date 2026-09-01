@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-01T10:48:45.2786215-05:00",
+  "title": "Design System: Brasa Brava",
+  "extensions": {
+    "colorMeta": {
+      "tomato-red": { "role": "primary", "displayName": "Tomato Red", "canonical": "oklch(0.54 0.225 29)", "tonalRamp": ["oklch(0.15 0.06 29)", "oklch(0.27 0.12 29)", "oklch(0.39 0.18 29)", "oklch(0.54 0.225 29)", "oklch(0.65 0.18 29)", "oklch(0.76 0.13 29)", "oklch(0.87 0.07 29)", "oklch(0.95 0.025 29)"] },
+      "mustard-yellow": { "role": "secondary", "displayName": "Mustard Yellow", "canonical": "oklch(0.82 0.16 84)", "tonalRamp": ["oklch(0.15 0.035 84)", "oklch(0.27 0.065 84)", "oklch(0.39 0.095 84)", "oklch(0.52 0.125 84)", "oklch(0.64 0.145 84)", "oklch(0.75 0.155 84)", "oklch(0.86 0.12 84)", "oklch(0.95 0.045 84)"] },
+      "deli-paper-cream": { "role": "neutral", "displayName": "Deli-Paper Cream", "canonical": "oklch(0.965 0.025 86)", "tonalRamp": ["oklch(0.15 0.01 86)", "oklch(0.27 0.012 86)", "oklch(0.39 0.014 86)", "oklch(0.52 0.016 86)", "oklch(0.64 0.018 86)", "oklch(0.76 0.02 86)", "oklch(0.87 0.022 86)", "oklch(0.965 0.025 86)"] },
+      "near-black-ink": { "role": "neutral", "displayName": "Near-Black Ink", "canonical": "oklch(0.17 0.035 44)", "tonalRamp": ["oklch(0.15 0.03 44)", "oklch(0.27 0.03 44)", "oklch(0.39 0.027 44)", "oklch(0.52 0.024 44)", "oklch(0.64 0.021 44)", "oklch(0.76 0.018 44)", "oklch(0.87 0.014 44)", "oklch(0.95 0.008 44)"] },
+      "menu-row-hover": { "role": "neutral", "displayName": "Toasted Mustard Wash", "canonical": "oklch(0.92 0.075 84)", "tonalRamp": ["oklch(0.15 0.025 84)", "oklch(0.27 0.035 84)", "oklch(0.39 0.045 84)", "oklch(0.52 0.055 84)", "oklch(0.64 0.062 84)", "oklch(0.76 0.068 84)", "oklch(0.87 0.072 84)", "oklch(0.95 0.05 84)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Oversized section declarations in uppercase Archivo Black." },
+      "headline": { "displayName": "Headline", "purpose": "Hero and location statements, capped at 6rem in the first viewport." },
+      "title": { "displayName": "Title", "purpose": "Burger names and item-level declarations." },
+      "body": { "displayName": "Body", "purpose": "Practical descriptions and explanatory copy in Manrope." },
+      "label": { "displayName": "Label", "purpose": "Navigation, prices, buttons, and compact utility language." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.23, 1, 0.32, 1)", "purpose": "Transform responses and mobile navigation movement." },
+      { "name": "state-fast", "value": "160ms", "purpose": "Button, link, and icon state changes." },
+      { "name": "drawer", "value": "180ms", "purpose": "Mobile navigation opacity and translation." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "760px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Order Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The default high-priority order action on tomato or cream fields.",
+      "html": "<button class=\"ds-btn-primary\">QUIERO LA BRAVA</button>",
+      "css": ".ds-btn-primary { display:inline-flex; min-height:52px; align-items:center; justify-content:center; border:0; border-radius:999px; background:var(--mustard, oklch(0.82 0.16 84)); padding:0 28px; color:var(--ink, oklch(0.17 0.035 44)); font:900 15px Manrope, sans-serif; transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background-color 160ms ease; } .ds-btn-primary:hover { transform:translateY(-2px); background:var(--cream, oklch(0.965 0.025 86)); } .ds-btn-primary:focus-visible { outline:3px solid var(--mustard, oklch(0.82 0.16 84)); outline-offset:5px; } .ds-btn-primary:active { transform:scale(.97); }"
+    },
+    {
+      "name": "Dark Order Button",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "The inverse call to action used on mustard fields.",
+      "html": "<button class=\"ds-btn-dark\">AVÍSAME CUANDO ABRAN</button>",
+      "css": ".ds-btn-dark { display:inline-flex; min-height:52px; align-items:center; justify-content:center; border:0; border-radius:999px; background:var(--ink, oklch(0.17 0.035 44)); padding:0 28px; color:var(--cream, oklch(0.965 0.025 86)); font:900 15px Manrope, sans-serif; transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background-color 160ms ease; } .ds-btn-dark:hover { transform:translateY(-2px); background:var(--cream, oklch(0.965 0.025 86)); color:var(--ink, oklch(0.17 0.035 44)); } .ds-btn-dark:focus-visible { outline:3px solid var(--tomato, oklch(0.54 0.225 29)); outline-offset:5px; } .ds-btn-dark:active { transform:scale(.97); }"
+    },
+    {
+      "name": "Brand Wordmark",
+      "kind": "nav",
+      "description": "The stacked typographic brand mark used in the header and footer.",
+      "html": "<a class=\"ds-brand\" href=\"#\">BRASA<span>BRAVA</span></a>",
+      "css": ".ds-brand { display:inline-block; color:var(--cream, oklch(0.965 0.025 86)); font:900 22px/.8 Manrope, sans-serif; letter-spacing:-.035em; text-decoration:none; } .ds-brand span { display:block; color:var(--mustard, oklch(0.82 0.16 84)); } .ds-brand:focus-visible { outline:3px solid var(--mustard, oklch(0.82 0.16 84)); outline-offset:5px; }"
+    },
+    {
+      "name": "Desktop Navigation",
+      "kind": "nav",
+      "description": "Compact utility navigation centered over the hero image.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\">Menú</a><a href=\"#\">Nuestra brasa</a><a href=\"#\">Encuéntranos</a></nav>",
+      "css": ".ds-nav { display:flex; gap:32px; color:var(--cream, oklch(0.965 0.025 86)); font:700 14px Manrope, sans-serif; } .ds-nav a { color:inherit; text-decoration:none; transition:color 160ms ease; } .ds-nav a:hover { color:var(--mustard, oklch(0.82 0.16 84)); } .ds-nav a:focus-visible { outline:3px solid var(--mustard, oklch(0.82 0.16 84)); outline-offset:5px; }"
+    },
+    {
+      "name": "Menu Row",
+      "kind": "card",
+      "description": "A ruled, flat menu entry with price and circular order affordance.",
+      "html": "<article class=\"ds-menu-row\"><div><h3>Doble Brava</h3><p>Doble smash, cheddar, pepinillos, cebolla, lechuga y salsa Brava.</p></div><div class=\"ds-menu-order\"><strong>$29.900</strong><a href=\"#\" aria-label=\"Pedir Doble Brava\"><svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a></div></article>",
+      "css": ".ds-menu-row { display:grid; grid-template-columns:1fr auto; gap:28px; align-items:center; min-height:220px; border-top:2px solid var(--ink, oklch(0.17 0.035 44)); border-bottom:2px solid var(--ink, oklch(0.17 0.035 44)); background:var(--cream, oklch(0.965 0.025 86)); color:var(--ink, oklch(0.17 0.035 44)); padding:0 8px; transition:background-color 180ms ease,transform 180ms cubic-bezier(0.23,1,0.32,1); } .ds-menu-row h3 { margin:0; font:400 clamp(34px,4vw,62px)/1 'Archivo Black',sans-serif; letter-spacing:-.035em; } .ds-menu-row p { max-width:58ch; margin:12px 0 0; font:600 15px/1.5 Manrope,sans-serif; } .ds-menu-order { display:flex; align-items:center; gap:24px; font:800 18px Manrope,sans-serif; } .ds-menu-order a { display:grid; width:58px; height:58px; place-items:center; border-radius:50%; background:var(--ink, oklch(0.17 0.035 44)); color:var(--cream, oklch(0.965 0.025 86)); transition:transform 160ms cubic-bezier(0.23,1,0.32,1),background-color 160ms ease; } .ds-menu-row:hover { background:oklch(0.92 0.075 84); transform:translateX(8px); } .ds-menu-order a:hover { transform:rotate(8deg); background:var(--tomato, oklch(0.54 0.225 29)); } .ds-menu-order a:focus-visible { outline:3px solid var(--tomato, oklch(0.54 0.225 29)); outline-offset:5px; } .ds-menu-order a:active { transform:scale(.95); }"
+    },
+    {
+      "name": "Flame Mark",
+      "kind": "custom",
+      "description": "A circular mustard stamp that punctuates the manifesto.",
+      "html": "<div class=\"ds-flame-mark\" aria-label=\"Brasa\"><svg viewBox=\"0 0 24 24\" width=\"40\" height=\"40\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 22c4.4 0 8-3.6 8-8 0-5-4-8-7-12 0 4-2 6-4 8-1.5-2-2-3.5-2-5-2 2-3 5-3 8.5C4 18.2 7.6 22 12 22Z\"/></svg></div>",
+      "css": ".ds-flame-mark { display:grid; width:86px; height:86px; place-items:center; border:2px solid var(--mustard, oklch(0.82 0.16 84)); border-radius:50%; background:var(--tomato, oklch(0.54 0.225 29)); color:var(--mustard, oklch(0.82 0.16 84)); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Sign-Painted Burger Counter",
+    "overview": "Brasa Brava feels like a neighborhood burger counter translated into crisp digital fields. Tomato red, deli-paper cream, mustard yellow, and near-black ink behave like sign paint: broad, blunt, and highly legible. Product photography is the only source of physical texture; the interface itself remains typographic, flat, and direct.\n\nThe system is appetite-first and deliberately loud without becoming busy. Oversized condensed-looking display forms carry the attitude, while compact Manrope copy keeps menu details practical. Density loosens around declarations and tightens around ordering decisions. The visual world supports the product promise: show the food immediately, name the choice concretely, and never manufacture social proof or operational certainty.",
+    "keyCharacteristics": [
+      "Flat, full-bleed color fields with near-black divider lines.",
+      "Oversized Archivo Black declarations with very tight leading and tracking.",
+      "Mustard pill actions and circular near-black utility controls.",
+      "Food photography as the sole textured material.",
+      "Direct Spanish copy with no decorative claims or filler UI."
+    ],
+    "rules": [
+      { "name": "The Four-Pot Rule", "body": "Build the interface from tomato, mustard, cream, and ink; the hover wash is a state, not a fifth brand color.", "section": "colors" },
+      { "name": "The Texture Belongs to Food Rule", "body": "Keep UI surfaces flat and clean. Texture comes from burger photography, never from decorative grain, gradients, or faux paper effects.", "section": "colors" },
+      { "name": "The Painted Declaration Rule", "body": "Use Archivo Black for short declarations, never for explanatory paragraphs.", "section": "typography" },
+      { "name": "The Tight-at-Scale Rule", "body": "Large type earns its force from compact line-height and negative tracking; do not loosen it into generic marketing typography.", "section": "typography" },
+      { "name": "The Appetite-First Viewport Rule", "body": "The first screen belongs to one life-size burger, one product name, and one mustard action. Supporting explanation stays subordinate.", "section": "layout" },
+      { "name": "The No-Shadow Rule", "body": "Never add card shadows, ambient glows, or floating panels. Use color adjacency, rules, and scale to establish hierarchy.", "section": "elevation" },
+      { "name": "The Ends-or-Edges Rule", "body": "A shape is either square and architectural or fully rounded and actionable. Avoid intermediate card radii.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do let one appetite image dominate the first viewport.",
+      "Do use full-bleed tomato, mustard, cream, or ink fields to separate major sections.",
+      "Do reserve Archivo Black for short, high-impact declarations and Manrope for useful detail.",
+      "Do use hard rules and color changes instead of card chrome or shadows.",
+      "Do preserve the 760px single-column collapse and 22px mobile gutter.",
+      "Do pair every motion response with a reduced-motion-safe result."
+    ],
+    "donts": [
+      "Don't introduce gradients, decorative texture, glass effects, or shadowed cards.",
+      "Don't add intermediate corner radii; use square fields, pill actions, or circles.",
+      "Don't expand hero display text beyond 6rem or let copy compete with the burger.",
+      "Don't dilute the palette with extra accents or use the hover wash as a resting surface.",
+      "Don't add feature-card grids, badges, testimonials, statistics, or unverified operational claims."
+    ]
+  }
+}
