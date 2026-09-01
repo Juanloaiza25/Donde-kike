@@ -4,12 +4,12 @@ import { ArrowDown, Flame, Menu as MenuIcon, MessageCircle, Minus, Phone, Plus, 
 import { KeyboardEvent, useEffect, useRef, useState } from 'react';
 
 const categories = [
-  { id: 'hamburguesas', label: 'Hamburguesas', intro: 'Sencillas, dobles, triples, mixtas y con todo el carácter de la casa.', items: ['Sencilla', 'Doble', 'Triple', 'Mixta', 'Gratinada', 'Especial', 'Mexicana'] },
-  { id: 'perros', label: 'Perros', intro: 'Clásicos, gratinados y combinaciones para hambre seria.', items: ['Sencillo', 'Doble', 'Súper gratinado', 'Especial', 'Mixto', 'Doble cañón con jalapeño', 'Choriperro'] },
-  { id: 'platos', label: 'Platos y picadas', intro: 'De la plancha a la mesa: porciones, picadas y sabores para compartir.', items: ['Sándwich de pollo, carne o mixto', 'Sándwich cubano o ranchero', 'Suiza con papitas a la francesa', 'Carne a la plancha: res, cerdo o pollo', 'Pechuga de pollo gratinada', 'Chorizo asado casero', 'Salchipapas y choripapas', 'Ceviche de camarones', 'Costillas y alas BBQ', 'Patacón burger: sencillo, doble o mixto', 'Arepa burger: sencilla, doble o mixta', 'Tostones: pollo, carne, mixto o camarones', 'Alas rellenas', 'Empanadas', 'Burritos: pollo, carne, mixto, ranchero, mexicano o camarones', 'Obleas y solteritas', 'Nuggets con papitas a la francesa'] },
-  { id: 'frias', label: 'Bebidas frías', intro: 'Para bajar el fuego o seguir la conversación.', items: ['Gaseosas Postobón y Coca-Cola', 'Gatorade', 'Agua con gas y sin gas', 'Pony Malta personal y mini', 'Jugos Hit', 'Jugos naturales', 'Cervezas en lata: artesanales y americanas', 'Descarchada de cerveza o tamarindo', 'Milo frío', 'Limonada de coco', 'Micheladas'] },
+  { id: 'hamburguesas', label: 'Hamburguesas', intro: 'Sencillas, dobles, triples, mixtas y con todo el carácter de la casa.', items: ['Sencilla', 'Doble', 'Triple', 'Mixta', 'Gratinada', 'Especial', 'Mexicana', 'Trifásica', 'Tortiburguer'] },
+  { id: 'perros', label: 'Perros', intro: 'Clásicos, gratinados y combinaciones para hambre seria.', items: ['Sencillo', 'Doble', 'Súper gratinado', 'Especial', 'Mixto', 'Doble cañón con jalapeño', 'Choriperro', 'Super Perro'] },
+  { id: 'platos', label: 'Platos y picadas', intro: 'De la plancha a la mesa: porciones, picadas y sabores para compartir.', items: ['Sándwich de pollo, carne o mixto', 'Sándwich cubano o ranchero', 'Suiza con papitas a la francesa', 'Carne a la plancha: res, cerdo o pollo', 'Pechuga de pollo gratinada', 'Chorizo asado casero', 'Salchipapa', 'Choripapa', 'Ceviche de camarones', 'Costillas y alas BBQ', 'Patacón burger: sencillo, doble o mixto', 'Arepa burger: sencilla, doble o mixta', 'Tostones: pollo, carne, mixto o camarones', 'Alas rellenas', 'Empanadas', 'Burritos: pollo, carne, mixto, ranchero, mexicano o camarones', 'Obleas y solteritas', 'Nuggets con papitas a la francesa', 'Arepa con pollo, carne, chicharrón, maíz, queso y jamón', 'Carne al barril', 'Costillas al barril', 'Salchipapa de la casa', 'Pepito'] },
+  { id: 'frias', label: 'Bebidas frías', intro: 'Para bajar el fuego o seguir la conversación.', items: ['Gaseosas Postobón y Coca-Cola', 'Gatorade', 'Agua con gas y sin gas', 'Pony Malta personal y mini', 'Jugos Hit', 'Jugos naturales', 'Cervezas en lata: artesanales y americanas', 'Milo frío', 'Limonada de coco', 'Micheladas en soda, cerveza o tamarindo', 'Aguas saborizadas', 'Té de limón o durazno', 'Granizados'] },
   { id: 'calientes', label: 'Bebidas calientes', intro: 'Café y bebidas de sobremesa.', items: ['Café oscuro o claro', 'Capuchino', 'Café americano y espresso', 'Milo caliente', 'Aromáticas', 'Café con leche y latte'] },
-  { id: 'adicionales', label: 'Adicionales', intro: 'Ese último toque que convierte el pedido en el tuyo.', items: ['Porción de papas', 'Tocineta', 'Yuca', 'Queso', 'Verduras', 'Arepa con pollo, carne, chicharrón, maíz, queso y jamón'] },
+  { id: 'adicionales', label: 'Adicionales', intro: 'Ese último toque que convierte el pedido en el tuyo.', items: ['Porción de papas', 'Tocineta', 'Yuca', 'Queso', 'Verduras',] },
 ];
 
 const whatsappBase = 'https://wa.me/573023266030?text=';
@@ -48,6 +48,13 @@ export default function Home() {
   const closeMenu = () => {
     setMenuOpen(false);
     requestAnimationFrame(() => menuButtonRef.current?.focus());
+  };
+
+  const handleNavClick = (targetId: string) => {
+    setMenuOpen(false);
+    setTimeout(() => {
+      document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+    }, 60);
   };
 
   const handleTabKey = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
@@ -99,9 +106,9 @@ export default function Home() {
         else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
       }}>
         <button ref={closeButtonRef} aria-label="Cerrar menú" onClick={closeMenu}><X /></button>
-        <a href="#menu" onClick={closeMenu}>Menú</a>
-        <a href="#variedad" onClick={closeMenu}>Variedad</a>
-        <a href="#contacto" onClick={closeMenu}>Domicilios</a>
+        <a href="#menu" onClick={(e) => { e.preventDefault(); handleNavClick('menu'); }}>Menú</a>
+        <a href="#variedad" onClick={(e) => { e.preventDefault(); handleNavClick('variedad'); }}>Variedad</a>
+        <a href="#contacto" onClick={(e) => { e.preventDefault(); handleNavClick('contacto'); }}>Domicilios</a>
       </div>}
 
       <div className="cart-toast" data-visible={Boolean(addedNotice)} role="status" aria-live="polite">{addedNotice && <><span>✓</span>{addedNotice}</>}</div>
