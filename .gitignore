@@ -36,3 +36,10 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# tools / AI agents (no relevancia para el repo)
+.impeccable/
+.agents/
+.openai/
+.oxfmtrc.json
+.oxlintrc.json
