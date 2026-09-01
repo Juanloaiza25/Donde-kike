@@ -155,7 +155,11 @@ export default function Home() {
         <div className="map-block"><div><span>Visítanos</span><h3>ENCUENTRA<br />DONDE KIKE.</h3><a href="https://www.google.com/maps?q=4.70119421480365,-75.73562288404393" target="_blank" rel="noreferrer">Abrir ubicación en Google Maps ↗</a></div><iframe src="https://www.google.com/maps/embed?pb=!4v1788279238551!6m8!1m7!1sYpdqAkxJWzv9T-HyFgm6Fw!2m2!1d4.70119421480365!2d-75.73562288404393!3f212.9488763803675!4f-17.381474950705467!5f0.7820865974627469" title="Ubicación de Donde Kike en Google Maps" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen /></div>
       </section>
 
-      <footer><a className="brand footer-brand donde-kike" href="#top">DONDE<span>KIKE!</span></a><p>Comida rápida y antojos.</p><a href="#top">Volver arriba ↑</a></footer>
+      <footer>
+        <a className="brand footer-brand donde-kike" href="#top">DONDE<span>KIKE!</span></a>
+        <p>Comida rápida y antojos. <br />Powered by <a href="https://github.com/Juanloaiza25" target="_blank" rel="noreferrer" style={{ textDecoration: 'underline', fontWeight: 700 }}>Juanloaiza25</a></p>
+        <a href="#top">Volver arriba ↑</a>
+      </footer>
     </main>
   );
 }
