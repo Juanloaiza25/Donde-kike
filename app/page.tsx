@@ -158,7 +158,7 @@ export default function Home() {
 
       <section className="location" id="contacto" aria-labelledby="contact-title">
         <div><Phone aria-hidden="true" /><h2 id="contact-title">PIDE DONDE KIKE.</h2></div>
-        <div className="location-details"><p><strong>WhatsApp</strong><br />302 326 6030</p><p><strong>Domicilios</strong><br />301 352 5168</p><a className="order-button dark" href={orderHref()} target="_blank" rel="noreferrer">Abrir WhatsApp</a></div>
+        <div className="location-details"><p><strong>WhatsApp</strong><br />302 326 6030</p><p><strong>Domicilios</strong><br />302 326 6030</p><a className="order-button dark" href={orderHref()} target="_blank" rel="noreferrer">Abrir WhatsApp</a></div>
         <div className="map-block"><div><span>Visítanos</span><h3>ENCUENTRA<br />DONDE KIKE.</h3><a href="https://www.google.com/maps?q=4.70119421480365,-75.73562288404393" target="_blank" rel="noreferrer">Abrir ubicación en Google Maps ↗</a></div><iframe src="https://www.google.com/maps/embed?pb=!4v1788279238551!6m8!1m7!1sYpdqAkxJWzv9T-HyFgm6Fw!2m2!1d4.70119421480365!2d-75.73562288404393!3f212.9488763803675!4f-17.381474950705467!5f0.7820865974627469" title="Ubicación de Donde Kike en Google Maps" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen /></div>
       </section>
 
